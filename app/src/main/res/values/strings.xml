@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Task Chain App</string>
+    <string name="please_wait">Please wait</string>
+    <string name="comment_hint_title">Comment</string>
+    <string name="save_task_comment">Save</string>
+    <string name="deadline">Deadline:</string>
+    <string name="switch_task_completed">Completed</string>
+    <string name="login">Login</string>
+    <string name="login_description_text">Login to view avaible task-chains</string>
+    <string name="user_name">User name</string>
+    <string name="password">Password</string>
+    <string name="no_internet">No internet connection available.</string>
+    <string name="no_user_with_userName">No user with this username exist.</string>
+    <string name="completed_true">Completed</string>
+    <string name="completed_false">Not completed</string>
+    <string name="task_chains">Task-Chains</string>
+    <string name="load_task_error">Error while loading task</string>
+    <string name="login_activity_label">Login</string>
+    <string name="tasks_activity_label">Tasks</string>
+    <string name="edit_task_activity_label">Edit task</string>
+    <string name="task_chains_activity_label">Task-chains</string>
+    <string name="load_task_chain_error">Error loading the task-chain</string>
+    <string name="comment_saved">Comment successfully saved</string>
+    <string name="please_enable_network_to_login">Please connect to the internet to login.</string>
+</resources>

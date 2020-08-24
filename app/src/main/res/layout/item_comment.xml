@@ -1,0 +1,80 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/item_cv_marginStartEnd"
+        android:layout_marginEnd="@dimen/item_cv_marginStartEnd"
+        android:background="@color/white_color"
+        app:cardCornerRadius="@dimen/item_cv_corner_radius"
+        app:cardElevation="@dimen/item_cv_elevation"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="@dimen/item_content_padding">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/item__ll_marginStart"
+                android:layout_marginEnd="@dimen/item_ll_marginEnd"
+                android:layout_weight="3"
+                android:gravity="start|top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_comment_creator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/item_comment_creator_textSize"
+                    tools:text="Creator" />
+
+                <TextView
+                    android:id="@+id/tv_comment_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/item_comment_date_textSize"
+                    tools:text="Date" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/separator_height"
+                android:background="@color/comment_separator"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/item__ll_marginStart"
+                android:layout_marginEnd="@dimen/item_ll_marginEnd"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/item_comment_textSize"
+                    tools:text="of Volare's most popular novels, and it has now come to Wuxiaworld! FOG is an ancient/historical slice-of-life 'transmigration into the past' type of novel which details the story of Lin Xiaowan/Yu Xiaocao, who was transmigrated into a small fishing village girl's body, and who embarks on a path to becoming the most fam" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
