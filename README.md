@@ -58,4 +58,4 @@ be moved around in the future.
 
 Also, this is my first real android app and my first time using Kotlin and RxJava, so there are certainly
 
-many things to improve. My goal is to make the cleaner, better and add more tests as I work on the poject.
+many things to improve. My goal is to make the code cleaner, better and add more tests as I work on the poject.
