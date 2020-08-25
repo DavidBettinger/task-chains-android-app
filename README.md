@@ -32,8 +32,8 @@ There are many more features I plan to add to the app. At the moment the most im
 
 - Improve the UI of the app
 - Save changes (comments / completed tasks) on the server
-- Add options/setting 
-- Add a new comment indicator
+- Add options/settings 
+- Add a "new comment" indicator
 
 
 
@@ -58,4 +58,4 @@ be moved around in the future.
 
 Also, this is my first real android app and my first time using Kotlin and RxJava, so there are certainly
 
-many things to improve. My goal is to make the code cleaner, better and add more tests as I work on the poject.
+many things to improve. My goal is to make the code cleaner, better and add more tests while working on the poject.
