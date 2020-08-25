@@ -30,4 +30,32 @@ At the moment this project is in a very early development stage. So far you can:
 
 There are many more features I plan to add to the app. At the moment the most important ones are:
 
- 
+- Improve the UI of the app
+- Save changes (comments / completed tasks) on the server
+- Add options/setting 
+- Add a new comment indicator
+
+
+
+### Technologies
+
+- Kotlin
+- Gradle
+- Retrofit2
+- RxJava / RxKotlin
+- Android Room
+- Hilt for dependency injection
+
+
+
+### Other information
+
+I started this project with a simple MVC architecture and then decided to switch to MVVM with Clean
+
+Architecture. At the moment the refactoring is still not completly finished, so I am sure some code will
+
+be moved around in the future.
+
+Also, this is my first real android app and my first time using Kotlin and RxJava, so there are certainly
+
+many things to improve. My goal is to make the cleaner, better and add more tests as I work on the poject.
