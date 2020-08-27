@@ -33,8 +33,20 @@ class TaskChainMapper @Inject constructor(private val taskMapper: TaskMapper, pr
             createdAt = domainModel.createdAt,
             createdByUser = userMapper.mapToEntity(domainModel.createdBy),
             tasks = taskMapper.mapToEntityList(domainModel.tasks, domainModel.id),
-            createdByUserId = domainModel.createdBy.id
+            createdByUserId = domainModel.createdBy.id,
+            taskCount = domainModel.tasks.size,
+            numberOfCompletedTasks = getNumberOfCompletedTasks(domainModel.tasks)
         )
+    }
+
+    private fun getNumberOfCompletedTasks(tasks: List<Task>): Int {
+        return tasks.fold(0, {acc, task ->
+            if(task.completed){
+                acc + 1
+            } else {
+                acc
+            }
+        })
     }
 
     fun mapToEntityList(domainModels: List<TaskChain>): List<TaskChainEntity> {

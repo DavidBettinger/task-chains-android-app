@@ -35,7 +35,7 @@ open class TaskChainsAdapter(
             holder.itemView.tv_task_chain_name.text = model.name
             holder.itemView.tv_task_chain_description.text = model.description
 
-            holder.itemView.tv_task_chain_progress.text = "${model.getNumberOfCompletedTasks()} / ${model.tasks.size}"
+            holder.itemView.tv_task_chain_progress.text = "${model.numberOfCompletedTasks} / ${model.taskCount}"
 
             if(model.completed){
                 holder.itemView.tv_task_chain_completed.text = context.getString(R.string.completed_true)

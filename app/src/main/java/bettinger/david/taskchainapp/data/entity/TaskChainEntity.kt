@@ -15,21 +15,15 @@ data class TaskChainEntity (
     var description: String,
     var completed: Boolean,
     var createdByUserId: Int,
+    var taskCount: Int,
+    var numberOfCompletedTasks: Int,
     @Ignore
     var createdByUser: UserEntity = UserEntity(-1),
     @Ignore
     val tasks: List<TaskEntity> = mutableListOf()
 ) {
 
-    constructor(): this(-1, "", "", "", "", false, -1)
-
-    fun getNumberOfCompletedTasks() = tasks.fold(0) { acc, taskEntity ->
-        if (taskEntity.completed){
-            acc + 1
-        }else{
-            acc
-        }
-    }
+    constructor(): this(-1, "", "", "", "", false, -1, 0, 0)
 
 }
 

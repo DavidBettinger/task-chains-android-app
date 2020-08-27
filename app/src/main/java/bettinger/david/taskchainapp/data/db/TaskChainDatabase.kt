@@ -12,7 +12,7 @@ import bettinger.david.taskchainapp.data.entity.UserEntity
 
 @Database(
     entities = [UserEntity::class, CommentEntity::class, TaskChainEntity::class, TaskEntity::class],
-    version = 2
+    version = 3
 )
 //@TypeConverters(DateConverter::class) //TODO change the dates from string to instance and add converter
 abstract class TaskChainDatabase : RoomDatabase() {
