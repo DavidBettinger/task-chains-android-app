@@ -10,4 +10,5 @@
     <color name="secondary_text_color">#646464</color>
     <color name="comment_separator">#DADADA</color>
     <color name="login_background">#DDDDCC</color>
+    <color name="separator">#999999</color>
 </resources>

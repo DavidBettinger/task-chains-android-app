@@ -8,7 +8,9 @@ import androidx.lifecycle.Observer
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import bettinger.david.taskchainapp.R
+import bettinger.david.taskchainapp.data.entity.TaskChainEntity
 import bettinger.david.taskchainapp.data.entity.TaskEntity
+import bettinger.david.taskchainapp.utils.Constants
 import bettinger.david.taskchainapp.view.adapters.TasksAdapter
 import bettinger.david.taskchainapp.viewmodel.TasksViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -47,7 +49,7 @@ class TasksActivity : BaseActivity() {
             viewModel.loadTaskChainWithTasks(taskChainId)
             viewModel.taskChainLiveData.observe(this, { taskChainEntity ->
                 hideProgressDialog()
-                setUpUI(taskChainEntity.name)
+                setUpUI(taskChainEntity)
                 setupTasksRecyclerView()
             })
         } else {
@@ -55,10 +57,21 @@ class TasksActivity : BaseActivity() {
         }
     }
 
-    private fun setUpUI(taskChainName: String) {
+    private fun setUpUI(taskChainEntity: TaskChainEntity) {
         setSupportActionBar(toolbar_tasks)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.title = taskChainName
+        supportActionBar!!.title = taskChainEntity.name
+
+        tv_task_chain_creator.text = resources.getString(
+            R.string.created_by,
+            taskChainEntity.createdByUser.firstName,
+            taskChainEntity.createdByUser.name
+        )
+        tv_task_chain_deadline.text = resources.getString(
+            R.string.deadline_task_chain,
+            Constants.formatDate(taskChainEntity.deadline)
+        )
+        tv_task_chain_description_full.text = taskChainEntity.description
 
         viewModel.messageLiveData.observe(this, {
             showMessage(it, this)

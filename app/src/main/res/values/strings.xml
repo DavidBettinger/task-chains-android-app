@@ -22,4 +22,6 @@
     <string name="load_task_chain_error">Error loading the task-chain</string>
     <string name="comment_saved">Comment successfully saved</string>
     <string name="please_enable_network_to_login">Please connect to the internet to login.</string>
+    <string name="created_by">"Created by: %1$s %2$s"</string>
+    <string name="deadline_task_chain">"Deadline: %1$s"</string>
 </resources>

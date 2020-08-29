@@ -57,4 +57,12 @@
     <dimen name="login_screen_btn_marginTop">30dp</dimen>
     <dimen name="btn_paddingTopBottom">8dp</dimen>
     <dimen name="btn_text_size">18sp</dimen>
+    <dimen name="tv_task_chain_description_full_text_size">16sp</dimen>
+    <dimen name="ll_marginStart">10dp</dimen>
+    <dimen name="ll_marginEnd">2dp</dimen>
+    <dimen name="ll_content_padding">3dp</dimen>
+    <dimen name="tv_task_chain_creator_textSize">12sp</dimen>
+    <dimen name="tv_task_chain_deadline_textSize">12sp</dimen>
+    <dimen name="separator_margin_top">4dp</dimen>
+    <dimen name="separator_margin_bottom">8dp</dimen>
 </resources>

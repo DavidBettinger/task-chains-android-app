@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.activities.TasksActivity"
     android:orientation="vertical">
 
@@ -12,6 +13,66 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
         android:theme="@style/CustomToolbarStyle" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/item_cv_marginStartEnd"
+        android:layout_marginEnd="@dimen/item_cv_marginStartEnd"
+        android:background="@color/white_color"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/item_cv_corner_radius"
+        app:cardElevation="@dimen/item_cv_elevation"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ll_marginStart"
+            android:layout_marginEnd="@dimen/ll_marginEnd"
+            android:orientation="vertical"
+            android:padding="@dimen/ll_content_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ll_marginStart"
+            android:layout_marginEnd="@dimen/ll_marginEnd"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_task_chain_creator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/tv_task_chain_creator_textSize"
+                tools:text="Creator" />
+
+            <TextView
+                android:id="@+id/tv_task_chain_deadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/tv_task_chain_deadline_textSize"
+                tools:text="Deadline" />
+        </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/separator_height"
+                android:layout_marginTop="@dimen/separator_margin_top"
+                android:layout_marginBottom="@dimen/separator_margin_bottom"
+                android:background="@color/separator"
+                />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_task_chain_description_full"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/tv_task_chain_description_full_text_size"
+            />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_task_list"
