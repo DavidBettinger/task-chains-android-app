@@ -1,3 +1,5 @@
+## The development is currently on hold, until the Angular front-end of the Task-Chain web app ist finished.
+
 # Task-Chain Android App
 
 An app to work on and complete tasks in a fixed order.
